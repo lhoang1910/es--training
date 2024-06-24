@@ -1,0 +1,4 @@
+rootProject.name = 'domain'
+
+include 'shared'
+project(':shared').projectDir = new File(rootDir, '../shared')

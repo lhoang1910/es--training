@@ -1,14 +1,6 @@
-rootProject.name = 'rootProject'
+rootProject.name = 'event-sourcing-demo'
 include 'command'
-
 include 'flow'
-project(':flow').projectDir = new File(rootDir, '../flow')
-
 include 'query'
-project(':query').projectDir = new File(rootDir, '../query')
-
-include 'domain'
-project(':domain').projectDir = new File(rootDir, '../domain')
-
 include 'shared'
-project(':shared').projectDir = new File(rootDir, '../shared')
+include 'domain'

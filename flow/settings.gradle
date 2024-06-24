@@ -1,0 +1,10 @@
+rootProject.name = 'flow'
+
+include 'query'
+project(':query').projectDir = new File(rootDir, '../query')
+
+include 'domain'
+project(':domain').projectDir = new File(rootDir, '../domain')
+
+include 'shared'
+project(':shared').projectDir = new File(rootDir, '../shared')
