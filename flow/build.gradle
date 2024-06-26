@@ -34,7 +34,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    implementation project(':query')
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
     implementation project(':domain')
     implementation project(':shared')
 }

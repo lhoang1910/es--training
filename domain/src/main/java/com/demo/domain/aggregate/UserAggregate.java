@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -24,7 +25,7 @@ public class UserAggregate extends BaseAggregate {
 
     public UserAggregate(CreateUserCommand command){
         raiseEvent(UserCreatedEvent.builder()
-                .id(command.getId())
+                .id(UUID.randomUUID().toString())
                 .userCode(command.getUserCode())
                 .username(command.getUsername())
                 .password(command.getPassword())
@@ -59,7 +60,7 @@ public class UserAggregate extends BaseAggregate {
 
     public void apply(UserDeletedEvent event) {
         this.id = event.getId();
-        this.isDeleted = event.getIsDeleted();
+        this.isDeleted = true;
     }
 
     public void updateUser(UpdateUserCommand command){

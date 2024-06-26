@@ -24,8 +24,6 @@
             <option value="$PROJECT_DIR$/command" />
             <option value="$PROJECT_DIR$/command/command" />
             <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/flow" />
-            <option value="$PROJECT_DIR$/query" />
             <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>

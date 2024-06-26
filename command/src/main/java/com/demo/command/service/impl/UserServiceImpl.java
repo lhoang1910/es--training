@@ -34,10 +34,9 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public WrapResponse<?> deleteUser(String id, DeleteUserCommand command) {
+    public WrapResponse<?> deleteUser(String id) {
         try {
-            command.setId(id);
-            commandDispatcher.send(command);
+            commandDispatcher.send(new DeleteUserCommand(id));
             return new WrapResponse<>(true, HttpStatus.OK.value(), "Delete user successful");
         } catch (Exception e) {
             String eMessage = "Error while processing request to delete user. " + e;

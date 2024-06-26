@@ -1,7 +1,7 @@
 package com.demo.command.service.impl;
 
-import com.demo.command.entity.EventStoreEntity;
-import com.demo.command.repository.EventStoreRepository;
+import com.demo.domain.entity.EventStoreEntity;
+import com.demo.domain.repository.EventStoreRepository;
 import com.demo.command.service.EventProducer;
 import com.demo.command.service.EventStore;
 import com.demo.domain.aggregate.UserAggregate;
@@ -50,11 +50,11 @@ public class UserEventStore implements EventStore {
                     .eventType(event.getClass().getTypeName())
                     .eventData(event)
                     .build();
-
             EventStoreEntity persistedEvent = eventStoreRepository.save(eventStore);
 
             if (!persistedEvent.getId().isEmpty()) {
                 eventProducer.produce(event.getClass().getSimpleName(), event);
+//                System.out.println(event.getClass().getSimpleName());
             }
 
         }

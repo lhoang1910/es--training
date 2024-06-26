@@ -1,12 +1,6 @@
 rootProject.name = 'rootProject'
 include 'command'
 
-include 'flow'
-project(':flow').projectDir = new File(rootDir, '../flow')
-
-include 'query'
-project(':query').projectDir = new File(rootDir, '../query')
-
 include 'domain'
 project(':domain').projectDir = new File(rootDir, '../domain')
 

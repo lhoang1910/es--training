@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class DeleteUserCommand  extends BaseCommand {
-    private String id;
-    private Boolean isDeleted;
+    public DeleteUserCommand(String id) {
+        super(id);
+    }
 }

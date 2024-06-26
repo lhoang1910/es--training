@@ -1,8 +1,7 @@
-package com.demo.command.entity;
+package com.demo.domain.entity;
 
 import com.demo.shared.base.BaseEvent;
 import com.demo.shared.constant.JPA_TYPE;
-import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +20,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 @Entity
-@TypeDef(name = JPA_TYPE.JSON_BINARY, typeClass = JsonBinaryType.class)
+@TypeDef(name = JPA_TYPE.JSON_BINARY, typeClass = com.vladmihalcea.hibernate.type.json.JsonBinaryType.class)
 @Table(name = "event_store")
 public class EventStoreEntity {
 
